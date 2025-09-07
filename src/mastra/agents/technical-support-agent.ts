@@ -1,6 +1,6 @@
 import { ollama } from "ollama-ai-provider-v2";
 import { anthropic } from "@ai-sdk/anthropic";
-import { openai } from "ai";
+import { openai } from "@ai-sdk/openai";
 import { Agent } from "@mastra/core/agent";
 import { Memory } from "@mastra/memory";
 import { LibSQLStore } from "@mastra/libsql";
