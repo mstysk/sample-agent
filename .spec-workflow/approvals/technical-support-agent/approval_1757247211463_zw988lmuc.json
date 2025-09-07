@@ -1,0 +1,45 @@
+{
+  "id": "approval_1757247211463_zw988lmuc",
+  "title": "Technical Support Agent Design Document",
+  "filePath": ".spec-workflow/specs/technical-support-agent/design.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-09-07T12:13:31.463Z",
+  "category": "spec",
+  "categoryName": "technical-support-agent",
+  "response": "Feedback Summary (3 comments):\n\nGeneral Comments:\n1. テクニカルサポートで必要になるツールの種類として、ソースコード、DB、ヘルプページがあると思います。これを利用することでより具体的なテクニカルサポートが出来ると思います。\n\n- ソースコード https://github.com/logiless/logiless\n- DB 接続情報は環境変数で定義できるように\n- ヘルプページ https://docs.logiless.com/\n\nソースコードは、mcp filesync を利用し、ヘルプページはMastraのRAGシステムを利用するのがいいと思いますが、他にいいやり方があればそちらでもいいと思います。\n\nSpecific Text Comments:\n1. \"ローカルLLMモデル統合\": 環境変数で切り替えるようにお願いします。\n- Ollama\n- OpenAI\n- Claude\n- etc\n2. \"LibSQLストレージシステム\": 環境変数で切り替えられるようにお願いします。\n\n- LibSQL\n- MySQL\n",
+  "annotations": "{\n  \"decision\": \"needs-revision\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"環境変数で切り替えるようにお願いします。\\n- Ollama\\n- OpenAI\\n- Claude\\n- etc\",\n      \"timestamp\": \"2025-09-07T12:15:38.863Z\",\n      \"selectedText\": \"ローカルLLMモデル統合\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      },\n      \"id\": \"comment_1757247338863_xvj5dwab0\"\n    },\n    {\n      \"type\": \"selection\",\n      \"comment\": \"環境変数で切り替えられるようにお願いします。\\n\\n- LibSQL\\n- MySQL\",\n      \"timestamp\": \"2025-09-07T12:16:21.170Z\",\n      \"selectedText\": \"LibSQLストレージシステム\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      },\n      \"id\": \"comment_1757247381170_4sdgluptk\"\n    },\n    {\n      \"type\": \"general\",\n      \"comment\": \"テクニカルサポートで必要になるツールの種類として、ソースコード、DB、ヘルプページがあると思います。これを利用することでより具体的なテクニカルサポートが出来ると思います。\\n\\n- ソースコード https://github.com/logiless/logiless\\n- DB 接続情報は環境変数で定義できるように\\n- ヘルプページ https://docs.logiless.com/\\n\\nソースコードは、mcp filesync を利用し、ヘルプページはMastraのRAGシステムを利用するのがいいと思いますが、他にいいやり方があればそちらでもいいと思います。\",\n      \"timestamp\": \"2025-09-07T12:20:36.457Z\",\n      \"id\": \"comment_1757247636457_4im9hrysi\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (3 comments):\\n\\nGeneral Comments:\\n1. テクニカルサポートで必要になるツールの種類として、ソースコード、DB、ヘルプページがあると思います。これを利用することでより具体的なテクニカルサポートが出来ると思います。\\n\\n- ソースコード https://github.com/logiless/logiless\\n- DB 接続情報は環境変数で定義できるように\\n- ヘルプページ https://docs.logiless.com/\\n\\nソースコードは、mcp filesync を利用し、ヘルプページはMastraのRAGシステムを利用するのがいいと思いますが、他にいいやり方があればそちらでもいいと思います。\\n\\nSpecific Text Comments:\\n1. \\\"ローカルLLMモデル統合\\\": 環境変数で切り替えるようにお願いします。\\n- Ollama\\n- OpenAI\\n- Claude\\n- etc\\n2. \\\"LibSQLストレージシステム\\\": 環境変数で切り替えられるようにお願いします。\\n\\n- LibSQL\\n- MySQL\\n\",\n  \"timestamp\": \"2025-09-07T12:21:52.471Z\"\n}",
+  "respondedAt": "2025-09-07T12:21:52.814Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "環境変数で切り替えるようにお願いします。\n- Ollama\n- OpenAI\n- Claude\n- etc",
+      "timestamp": "2025-09-07T12:15:38.863Z",
+      "selectedText": "ローカルLLMモデル統合",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      },
+      "id": "comment_1757247338863_xvj5dwab0"
+    },
+    {
+      "type": "selection",
+      "comment": "環境変数で切り替えられるようにお願いします。\n\n- LibSQL\n- MySQL",
+      "timestamp": "2025-09-07T12:16:21.170Z",
+      "selectedText": "LibSQLストレージシステム",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      },
+      "id": "comment_1757247381170_4sdgluptk"
+    },
+    {
+      "type": "general",
+      "comment": "テクニカルサポートで必要になるツールの種類として、ソースコード、DB、ヘルプページがあると思います。これを利用することでより具体的なテクニカルサポートが出来ると思います。\n\n- ソースコード https://github.com/logiless/logiless\n- DB 接続情報は環境変数で定義できるように\n- ヘルプページ https://docs.logiless.com/\n\nソースコードは、mcp filesync を利用し、ヘルプページはMastraのRAGシステムを利用するのがいいと思いますが、他にいいやり方があればそちらでもいいと思います。",
+      "timestamp": "2025-09-07T12:20:36.457Z",
+      "id": "comment_1757247636457_4im9hrysi"
+    }
+  ]
+}

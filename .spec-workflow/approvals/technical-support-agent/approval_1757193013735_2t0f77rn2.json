@@ -1,0 +1,39 @@
+{
+  "id": "approval_1757193013735_2t0f77rn2",
+  "title": "Technical Support Agent Requirements",
+  "filePath": ".spec-workflow/specs/technical-support-agent/requirements.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-09-06T21:10:13.735Z",
+  "category": "spec",
+  "categoryName": "technical-support-agent",
+  "response": "Feedback Summary (2 comments):\n\nSpecific Text Comments:\n1. \"weatherエージェントを補完しま\": weather エージェントは利用しません\n2. \"特定の技術に言及した場合\": 特定の技術は、利用しているアプリケーション内の技術でなければ解答しなくてよいです。\n",
+  "annotations": "{\n  \"decision\": \"needs-revision\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"weather エージェントは利用しません\",\n      \"timestamp\": \"2025-09-07T12:03:41.338Z\",\n      \"selectedText\": \"weatherエージェントを補完しま\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      },\n      \"id\": \"comment_1757246621338_acc9pbdxc\"\n    },\n    {\n      \"type\": \"selection\",\n      \"comment\": \"特定の技術は、利用しているアプリケーション内の技術でなければ解答しなくてよいです。\",\n      \"timestamp\": \"2025-09-07T12:05:56.916Z\",\n      \"selectedText\": \"特定の技術に言及した場合\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      },\n      \"id\": \"comment_1757246756916_j3cml7qw2\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (2 comments):\\n\\nSpecific Text Comments:\\n1. \\\"weatherエージェントを補完しま\\\": weather エージェントは利用しません\\n2. \\\"特定の技術に言及した場合\\\": 特定の技術は、利用しているアプリケーション内の技術でなければ解答しなくてよいです。\\n\",\n  \"timestamp\": \"2025-09-07T12:07:18.302Z\"\n}",
+  "respondedAt": "2025-09-07T12:07:18.977Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "weather エージェントは利用しません",
+      "timestamp": "2025-09-07T12:03:41.338Z",
+      "selectedText": "weatherエージェントを補完しま",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      },
+      "id": "comment_1757246621338_acc9pbdxc"
+    },
+    {
+      "type": "selection",
+      "comment": "特定の技術は、利用しているアプリケーション内の技術でなければ解答しなくてよいです。",
+      "timestamp": "2025-09-07T12:05:56.916Z",
+      "selectedText": "特定の技術に言及した場合",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      },
+      "id": "comment_1757246756916_j3cml7qw2"
+    }
+  ]
+}
