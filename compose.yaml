@@ -1,0 +1,28 @@
+services:
+  llm:
+    image: ollama/ollama:latest
+    volumes:
+      - ollama:/root/.ollama
+    ports:
+      - 11434:11434
+    environment:
+      MODEL: ${MODEL:-llama3.1:8b}
+    healthcheck:
+      test: ollama show $${MODEL}
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  runner:
+    image: curlimages/curl:8.15.0
+    depends_on:
+      llm:
+        condition: service_healthy
+    command:
+      [
+        "http://llm:11434/api/generate",
+        "-d",
+        '{"model": "llama3.1:8b", "prompt": "say: ready"}',
+      ]
+    restart: "no"
+volumes:
+  ollama:
