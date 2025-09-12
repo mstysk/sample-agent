@@ -1,39 +1,48 @@
-import { ollama } from "ollama-ai-provider-v2";
+import { createOllama } from "ollama-ai-provider-v2";
 import { anthropic } from "@ai-sdk/anthropic";
 import { openai } from "@ai-sdk/openai";
 import { Agent } from "@mastra/core/agent";
 import { Memory } from "@mastra/memory";
 import { LibSQLStore } from "@mastra/libsql";
-import { loadEnvironmentConfig, LLMProvider } from "../types/environment";
+import { LLMProvider, loadEnvironmentConfig } from "../types/environment";
 import { sourceCodeSearchTool } from "../tools/source-code-tool";
 import { helpDocsSearchTool } from "../tools/help-docs-tool";
 import { databaseConnectionTool } from "../tools/database-tool";
 
+const ollama = createOllama({
+  baseURL: process.env.OLLAMA_API_URL || "http://localhost:11434",
+});
+
 function createLLMProvider(provider: LLMProvider) {
+  console.log(`Using LLM provider: ${provider}`);
   switch (provider) {
-    case 'ollama':
+    case "ollama":
       return ollama("llama3.1:8b");
-    case 'openai':
+    case "openai":
       // Note: Requires OPENAI_API_KEY environment variable
       return openai("gpt-4");
-    case 'claude':
+    case "claude":
       // Note: Requires ANTHROPIC_API_KEY environment variable
       return anthropic("claude-3-5-sonnet-20241022");
     default:
-      console.warn(`Unknown LLM provider: ${provider}. Falling back to ollama.`);
+      console.warn(
+        `Unknown LLM provider: ${provider}. Falling back to ollama.`,
+      );
       return ollama("llama3.1:8b");
   }
 }
 
 function createMemoryStorage(config: any) {
   switch (config.storageType) {
-    case 'libsql':
+    case "libsql":
       return new LibSQLStore({
         url: process.env.LIBSQL_URL || "file:../mastra.db",
       });
-    case 'mysql':
+    case "mysql":
       // In a real implementation, this would use MySQL storage
-      console.warn('MySQL storage not implemented yet. Using LibSQL as fallback.');
+      console.warn(
+        "MySQL storage not implemented yet. Using LibSQL as fallback.",
+      );
       return new LibSQLStore({
         url: process.env.LIBSQL_URL || "file:../mastra.db",
       });

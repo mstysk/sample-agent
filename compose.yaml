@@ -1,4 +1,21 @@
 services:
+  agent:
+    build: .
+    env_file: .env
+    command: "npm run dev"
+    ports:
+      - 4111:4111
+      - 4112:4112
+    develop:
+      watch:
+        - action: sync
+          path: ./
+          target: /app
+          ignore:
+            - node_modules
+        - action: rebuild
+          path: package.json
+
   llm:
     image: ollama/ollama:latest
     volumes:
